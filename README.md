@@ -37,6 +37,35 @@ REQUEST_TOKEN=your_request_token
 ACCESS_TOKEN=your_access_token
 ```
 
+## Claude Desktop MCP Configuration
+
+To use this MCP server with Claude Desktop, you need to configure the mcp server details. Here's how to set it up:
+
+1. Open `claude_desktop_config.json` in your project root
+2. Add the following configuration:
+```json
+{
+  "mcpServers": {
+    "tradeStocks": {
+      "command": "/opt/homebrew/bin/bun",
+      "args": [
+        "/path/to/your/index.ts"
+      ], 
+      "env": {
+        "KITE_API_KEY": "your_api_key",
+        "KITE_SECRET_KEY": "your_secret_key",
+        "REQUEST_TOKEN": "your_request_token",
+        "ACCESS_TOKEN": "your_access_token"
+      }
+    }
+  }
+}
+```
+
+Make sure to:
+- Update the path to your `index.ts` file
+- Replace the environment variables with your actual Zerodha credentials
+
 ## Usage
 
 The MCP server provides the following tools:
