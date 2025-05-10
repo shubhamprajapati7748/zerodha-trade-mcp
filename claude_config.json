@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "tradeStocks": {
+      "command": "/opt/homebrew/bin/bun",
+      "args": [
+        "/Users/shubham/Desktop/zerodha-trade-mcp/index.ts"
+      ], 
+      "env": {
+        "KITE_API_KEY": "your_api_key",
+        "KITE_SECRET_KEY": "your_secret_key",
+        "REQUEST_TOKEN": "your_request_token",
+        "ACCESS_TOKEN": "your_access_token"
+      }
+    }
+  }
+}
